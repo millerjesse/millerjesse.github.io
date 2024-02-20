@@ -2,14 +2,14 @@
 
 @font-face {
     font-family:Lato;
-    src: url(../fonts/lato-regular.ttf);
+    src: url(../Fonts/lato-regular.ttf);
     font-style:normal;
     font-weight:normal;
 }
 @font-face {
 
     font-family:Alfa Slab One;
-    src: url(../fonts/alfa-slab-one-regular.ttf);
+    src: url(../Fonts/alfa-slab-one-regular.ttf);
     font-style:normal;
     font-weight:normal;
 }
