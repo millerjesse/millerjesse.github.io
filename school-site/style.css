@@ -1,4 +1,4 @@
-/* General setup */
+* General setup */
 
 * {
     box-sizing: border-box;
@@ -212,5 +212,4 @@ nav a:active{
 footer{
 text-align: center;
 }
-
 
