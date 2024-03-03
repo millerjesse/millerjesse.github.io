@@ -1,196 +1,201 @@
-/* General setup */
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
 
-* {
-    box-sizing: border-box;
+        /* 
+        
+        Spacing 
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+            - letter-spacing, word-spacing, line-height
+            - width, max-width, min-width
+            - height, max-height, min-height
+        Typography 
+            - font-family, font-size, font-style, font-weight
+            - text-decoration, text-align
+            - color
+            - text-shadow, text-transform
+        Box, Layout and Border 
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+            - box-shadow
+            - display, float, align-items, align-content
+            - grid-template-columns, grid-column-gap
+            - transform
+        Other
+            - :nth()-child (to target specific child elements)
+            - :focus, :hover, :active (to target link states)
+            - @font-face or @import (to import typefaces)
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Imported Type Faces */
+
+@font-face {
+    font-family:"roboto";
+    src: url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
 }
 
-html {
-    font-size:16px;
+@font-face {
+    font-family:"ultra";
+    src: url(../fonts/serif/ultra-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:"lato";
+    src: url(../fonts/sans-serif/lato-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
 }
 
-body {
-    margin: 1.5rem auto;
-    width:90%;
-    min-width:56.25rem;
+/* Page Layout */
+
+.main-section {
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
-
-/* Layout */
-
-main {
-    overflow:auto;
-    min-width:45rem;
-    
-}
-
-section {
+.article-image {
     float: left;
-    min-width: 22.5rem;
-    width:50%;
+    margin-right: 1rem;
 }
+.subsection {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Heading Styles */
+
+h1 {
+    font-family:"roboto", Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5rem;
+	transform: rotate(-5deg);
+    
+    }
+
+.highlight {
+	text-transform: uppercase;
+    font-family:"ultra", Times, serif;
+    font-size: 4rem;
+	border-top-left-radius: 20% 40%;
+    border-bottom-right-radius: 20% 40%;
+    border: 1rem solid maroon;
+    background-color: maroon;
+    color:lightyellow;
+    text-align: center;
+}
+h2 {
+    font-family:"roboto", Verdana, sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+
+h3 {
+    font-family: "roboto", Verdana, sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+p {
+    font-family: "roboto", Verdana, sans-serif;
+    text-align: left;
+
+}
+
+/* Nav Style */
+
+nav {
+    border-top: .05rem solid black;
+    border-bottom: .05rem solid black;
+    word-spacing: 4rem;
+    line-height: 4rem;
+    margin-left: 3rem;
+}
+
+nav a{
+    font-family: "lato", Verdana, sans-serif;
+    font-size: 2rem;
+    color: blue;
+}
+
+
+/* Other Style */
+
+.slash {
+text-decoration-line: line-through;
+width: 10rem;
+height: 10rem;
+color: black;
+text-transform: uppercase;
+}
+
 
 figure {
-    width:60%;
-    margin:0 10% 0 0;
-    float:left;
-}
-
-figure img {
-    width:100%;
-    max-width:25rem;
+ margin-bottom: none;
 }
 
 figcaption {
-    margin:.375rem 0;
+    border-top: 0.5rem solid lightyellow;
+    border-left: 0.5rem solid lightyellow;
+    border-right: 0.5rem solid lightyellow;
+    border-bottom: 0.5rem solid lightyellow;
+    background-color: lightyellow;
 }
 
-.long-list {
-    margin-top:0;
+.time {
+    font-size: 1rem;
+    font-style: oblique;
 }
 
-nav {
-    float: left;
-    width:11.25rem;
+aside {
+    margin-left: 2rem;
+    margin-right: 4rem;  
+}
+
+.dots {
+    font-size: .15rem;
+}
+
+button {
+    font-family:"roboto", Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    border: 2rem solidblack;
+    background-color: navy;
+    color: white;
+    margin-top: 1 rem;
+}
+
+/* Header and Footer Style */
+
+.copyright {
+   float: left;
+   text-align: left;
+}
+
+.links {
+   float: right;
+   text-align: right;
 }
 
 footer {
-    clear: both;
-    margin-top:1.5rem;
+    font-family: "roboto", Verdana, sans-serif;
 }
 
-section, aside, nav, footer {
-  padding: .5rem;
+a {
+    font-family: "roboto", Verdana, sans-serif;
 }
-
-/* header and footer */
-
-header, footer {
-  border-top: .125rem solid #33658A;
-  border-bottom: .125rem solid #33658A;
-}
-
-/* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
-
-/* NO changes should be made to any of the code above. */
-
-/* NOTE: While you will be using some of the same CSS properties, the VALUES 
-   may need to be different in order to style the page correctly. */
-
-
-
-/* Imported Typfaces */
-
-@font-face {
-    font-family:montserrat;
-    src: url(../fonts/montserrat-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
-}
-@font-face {
-    font-family:josefinslab;
-    src: url(../fonts/josefinslab-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
-}
-/* Typography Styles */
-html {
-    font-family: 'montserrat';
-}
-
-h1{ letter-spacing: .125rem;
-    font-family: 'josefinslab';
-    font-size: 3.75rem;
-    margin: 1.125rem;
-    text-align: center   
-}
-h1, span{font-size: 4rem;
-}
-h2{ letter-spacing: .125rem;
-    font-family: 'josefinslab';
-    font-size: 1.5rem;
-}
-
-h2 + p {text-indent: 1.5rem;   
-}
-
-p{ font-size: .75rem;
-   letter-spacing: .03125rem;
-   word-spacing: .125rem;
-}
-
-li{font-size: .75rem;
-   letter-spacing: .03125rem;
-   word-spacing: .125rem;
-}
-
-figcaption {font-size: .75rem;
-            margin-bottom: 2rem;
-}
-
 
 /* Link Styling */
 
-a {outline: none;
-}
-
-a:link,
-a:visited {color: #33658A;
-}
-
-a:focus,
-a:hover {text-decoration: none;
-}
-
-
-/* List Styling */
-
-ul {margin-top: 1rem;
-    padding-bottom: 1rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    list-style-type: square;
-}
-
-ol{ margin-top: 1rem;
-    padding-bottom: 1rem;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    list-style-type: lower-alpha;
-}
-
-.long-list a:hover {text-transform: uppercase;
-}
-
-
-
-/* Navigation Menu */
-
-nav{padding-left: 0rem;
-    margin-top: .25rem;
-}
-
-nav a {text-decoration: none;
-       display: inline-block;
-       width: 100%;
-       line-height: 3;
-       text-align: center;
-       font-size: 1.125rem;
-       margin-bottom: 1.5rem;
-       border: solid;
-       border-width: .0625rem;
-       border-color: #33658A;
-}
-
-nav a:focus,
-nav a:hover {color: #FFF;
-             background-color: #33658A;  
-}
-
-nav a:active {color: #FFF;
-              background-color: #000;
-}
-
-
-/* Footer Styles */
-
-footer {text-align: center
+a{
+    outline: none;
+    text-decoration-line: none;
 }
