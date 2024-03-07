@@ -3,273 +3,199 @@
         /* 
         
         Spacing 
-
             - padding (shorthand and/or specific properties like padding-bottom, etc.)
-
             - margin, (shorthand and/or specific properties like margin-top, etc.)
-
             - letter-spacing, word-spacing, line-height
-
             - width, max-width, min-width
             - height, max-height, min-height
-
         Typography 
-
             - font-family, font-size, font-style, font-weight
-
             - text-decoration, text-align
-
             - color
-
             - text-shadow, text-transform
-
         Box, Layout and Border 
-
             - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
-
             - box-shadow
-
             - display, float, align-items, align-content
-
             - grid-template-columns, grid-column-gap
-
             - transform
-
         Other
-
             - :nth()-child (to target specific child elements)
-
             - :focus, :hover, :active (to target link states)
-
             - @font-face or @import (to import typefaces)
-
         */
 
 
 /* ------ START WRITING YOUR CODE BELOW ------ */
-@font-face {
-    font-family: 'lato-regular';
-    src: url(/blog/fonts/sans-serif/lato-regular.ttf);
-    font-style: regular;
-    font-weight: regular;
-}
+
+/* Imported Type Faces */
 
 @font-face {
-    font-family: 'montserrat-regular';
-    src:url(/blog/fonts/sans-serif/montserrat-regular.ttf);
-    font-style: bold;
-    font-weight: bold;
+    font-family:"roboto";
+    src: url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
 }
 
-html{
-    font-size: 16px;
+@font-face {
+    font-family:"ultra";
+    src: url(../fonts/serif/ultra-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:"lato";
+    src: url(../fonts/sans-serif/lato-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
 }
 
-body {
-    font-family: 'lato-regular', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-main {
-    margin: auto;
-    width: 98%;
-    max-width: 112.5rem;
-}
-
-img {
-    display: block;
-    width: 100%;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 6.25rem;
-    padding: 1.25rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    rotate: -10deg;
-    max-width: 100%;
-}
-
-article :nth-child(1), :nth-child(2), :nth-child(3) {
-    margin-top: 0;
-}
-
-aside :nth-child(1) {
-    margin-top:0;
-}
-
-span.highlight {
-    max-width: 15.625rem;
-    background-color: darkslateblue;
-    color: beige;
-    margin-left: 0.625rem;
-    margin-right: 0.625rem;
-    font-family: 'montserrat-regular', sans-serif;
-    font-size: 3.125rem;
-    font-weight: bold;
-    padding-top: 1.5625rem;
-    rotate: -10deg;
-    gap: 20px;
-    text-shadow:
-    0.0625rem 0.0625rem 0.0625rem black,
-    0.125rem 0.125rem 0.0625rem black;
-}
-
-.nav {
-    border-top: 0.125rem solid black;
-    border-bottom: 0.125rem solid black;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 0.3125rem 0;
-    margin: 0;
-}
-
- .nav-list {
-    color: #0056b3;
-    font-weight: normal;
-    list-style: none;
-    display: flex;
-    justify-content: left;
-    text-decoration: none;
- }
-
- .nav-list a {
-    text-decoration: none;
-    color: #0056b3;
-    margin: 0 0.9375rem;
- }
-
- .nav-list a:hover, .nav-list a:focus {
-    text-decoration: none;
-
- }
-
-ul {
-    display: flex;
-}
-
-li {
-    list-style: none;
-    padding: 1.25rem 2.5rem;
-    font-size: 1.25rem;
-    cursor: pointer;
-    font-stretch: expanded;
-}
-
-.nav-list :nth-child(2) a {
-    text-decoration-line: line-through;
-    color: black;
-    font-size: smaller;
-    font-style: oblique;
-    text-transform: uppercase;
-    -webkit-transform:rotateY(10deg);
-    transform:rotateY(10deg);
-    
-}
+/* Page Layout */
 
 .main-section {
     display: flex;
+    margin-left: 2rem;
+    margin-right: 1rem;
 }
-
 .article-image {
     float: left;
-    margin: 0 2% 0 0;
-    max-width: 37.5rem;
+    margin-right: 1rem;
 }
-
-
-article {
-    width: 75%;
-    clear: left;
-}
-
-aside{
-    border-left: 0.125rem solid black;
-    width: 19%;
-    padding-left: 3%;
-    margin-left: 3%;
-}
-
-aside img {
-    max-width: 25rem;
-}
-
 .subsection {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-column-gap: .3125rem;
-    margin-top: 5%;
-    
+    display: flex;
+    justify-content: flex-start;
 }
 
-.subsection.figure{
-    margin: 0;
-}
+/* Heading Styles */
 
-.subsection img {
-    max-width: 25rem;   
-}
-
-.subsection figcaption {
-    padding: 1%;
-    background-color: beige;
-}
-
-
-.subscribe-button {
-    background-color: rgb(70, 70, 117);
-    color: white;
-    font-size: 2.5rem;
-    border-radius: 1.875rem;
-    cursor: pointer;
+h1 {
+    font-family:"roboto", Verdana, sans-serif;
+    font-size: 3rem;
     font-weight: bold;
-    float: left;
-    width: 25%;
-    padding: 1%;
-    margin-top: 2%;
+    text-align: center;
+    margin-bottom: 5rem;
+	transform: rotate(-5deg);
+    
     }
 
-.expand {
-    display: block;
+.highlight {
+	text-transform: uppercase;
+    font-family:"ultra", Times, serif;
+    font-size: 4rem;
+	border-top-left-radius: 20% 40%;
+    border-bottom-right-radius: 20% 40%;
+    border: 1rem solid maroon;
+    background-color: maroon;
+    color:lightyellow;
+    text-align: center;
+}
+h2 {
+    font-family:"roboto", Verdana, sans-serif;
+    font-size: 1.5rem;
     text-align: left;
-    font-size: 0.3125rem;
-    margin-top: 0.625rem;
-    color: #007bff;
-    text-decoration: none;
-    border-bottom: 0.125rem solid black;
-    max-width: 100%;
-    padding-bottom: 2.5rem;
-    align-self: center;
+    margin-top: 3rem;
+    margin-left: 4rem;
 }
 
-.expand:hover {
-    color: #0056b3;
+h3 {
+    font-family: "roboto", Verdana, sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+p {
+    font-family: "roboto", Verdana, sans-serif;
+    text-align: left;
+
+}
+
+/* Nav Style */
+
+nav {
+    border-top: .05rem solid black;
+    border-bottom: .05rem solid black;
+    word-spacing: 4rem;
+    line-height: 4rem;
+    margin-left: 3rem;
+}
+
+nav a{
+    font-family: "lato", Verdana, sans-serif;
+    font-size: 2rem;
+    color: blue;
+}
+
+
+/* Other Style */
+
+.slash {
+text-decoration-line: line-through;
+width: 10rem;
+height: 10rem;
+color: black;
+text-transform: uppercase;
+}
+
+
+figure {
+ margin-bottom: none;
+}
+
+figcaption {
+    border-top: 0.5rem solid lightyellow;
+    border-left: 0.5rem solid lightyellow;
+    border-right: 0.5rem solid lightyellow;
+    border-bottom: 0.5rem solid lightyellow;
+    background-color: lightyellow;
+}
+
+.time {
+    font-size: 1rem;
+    font-style: oblique;
+}
+
+aside {
+    margin-left: 2rem;
+    margin-right: 4rem;  
+}
+
+.dots {
+    font-size: .15rem;
+}
+
+button {
+    font-family:"roboto", Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    border: 2rem solidblack;
+    background-color: navy;
+    color: white;
+    margin-top: 1 rem;
+}
+
+/* Header and Footer Style */
+
+.copyright {
+   float: left;
+   text-align: left;
+}
+
+.links {
+   float: right;
+   text-align: right;
 }
 
 footer {
-    margin: 4% auto;
-    width: 98%;
-    max-width: 112.5rem;
-    display: flex;
-
+    font-family: "roboto", Verdana, sans-serif;
 }
 
-footer p {
-    width: 50%;
+a {
+    font-family: "roboto", Verdana, sans-serif;
 }
 
-.attribution {
-    text-align: right;
-}
+/* Link Styling */
 
-.attribution a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.attribution a:hover {
-    color: #0056b3;
+a{
+    outline: none;
+    text-decoration-line: none;
 }
